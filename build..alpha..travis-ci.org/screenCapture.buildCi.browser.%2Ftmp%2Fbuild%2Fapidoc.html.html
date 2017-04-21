@@ -1,0 +1,3176 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/rtfeldman/seamless-immutable">seamless-immutable (v7.1.2)</a>
+</h1>
+<h4>Immutable data structures for JavaScript which are backwards-compatible with normal JS Arrays and Objects.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.seamless-immutable">module seamless-immutable</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.seamless-immutable">
+            function <span class="apidocSignatureSpan"></span>seamless-immutable
+            <span class="apidocSignatureSpan">(obj, options, stackRemaining)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.ImmutableError">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>ImmutableError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.ImmutableError.prototype.constructor">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>ImmutableError.prototype.constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.asMutable">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>asMutable
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.asObject">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>asObject
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.flatMap">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>flatMap
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.from">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>from
+            <span class="apidocSignatureSpan">(obj, options, stackRemaining)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.getIn">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>getIn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.isImmutable">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>isImmutable
+            <span class="apidocSignatureSpan">(target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.merge">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>merge
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.replace">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>replace
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.seamless_immutable_development">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>seamless_immutable_development
+            <span class="apidocSignatureSpan">(obj, options, stackRemaining)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.set">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>set
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.setIn">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>setIn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.static">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>static
+            <span class="apidocSignatureSpan">(obj, options, stackRemaining)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.static.ImmutableError">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>static.ImmutableError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.update">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>update
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.updateIn">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>updateIn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.without">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>without
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">seamless-immutable.</span>ImmutableError.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">seamless-immutable.</span>static.ImmutableError.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.seamless-immutable.ImmutableError">module seamless-immutable.ImmutableError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.ImmutableError.ImmutableError">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>ImmutableError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.seamless-immutable.ImmutableError.prototype">module seamless-immutable.ImmutableError.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.ImmutableError.prototype.constructor">
+            function <span class="apidocSignatureSpan">seamless-immutable.ImmutableError.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.seamless-immutable.ImmutableError.prototype.constructor">module seamless-immutable.ImmutableError.prototype.constructor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.ImmutableError.prototype.constructor.constructor">
+            function <span class="apidocSignatureSpan">seamless-immutable.ImmutableError.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.ImmutableError.prototype.constructor.captureStackTrace">
+            function <span class="apidocSignatureSpan">seamless-immutable.ImmutableError.prototype.constructor.</span>captureStackTrace
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">seamless-immutable.ImmutableError.prototype.constructor.</span>stackTraceLimit</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.seamless-immutable.from">module seamless-immutable.from</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.from.from">
+            function <span class="apidocSignatureSpan">seamless-immutable.</span>from
+            <span class="apidocSignatureSpan">(obj, options, stackRemaining)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.from.ImmutableError">
+            function <span class="apidocSignatureSpan">seamless-immutable.from.</span>ImmutableError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.from.asMutable">
+            function <span class="apidocSignatureSpan">seamless-immutable.from.</span>asMutable
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.from.asObject">
+            function <span class="apidocSignatureSpan">seamless-immutable.from.</span>asObject
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.from.flatMap">
+            function <span class="apidocSignatureSpan">seamless-immutable.from.</span>flatMap
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.from.getIn">
+            function <span class="apidocSignatureSpan">seamless-immutable.from.</span>getIn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.from.isImmutable">
+            function <span class="apidocSignatureSpan">seamless-immutable.from.</span>isImmutable
+            <span class="apidocSignatureSpan">(target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.from.merge">
+            function <span class="apidocSignatureSpan">seamless-immutable.from.</span>merge
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.from.replace">
+            function <span class="apidocSignatureSpan">seamless-immutable.from.</span>replace
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.from.set">
+            function <span class="apidocSignatureSpan">seamless-immutable.from.</span>set
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.from.setIn">
+            function <span class="apidocSignatureSpan">seamless-immutable.from.</span>setIn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.from.static">
+            function <span class="apidocSignatureSpan">seamless-immutable.from.</span>static
+            <span class="apidocSignatureSpan">(obj, options, stackRemaining)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.from.update">
+            function <span class="apidocSignatureSpan">seamless-immutable.from.</span>update
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.from.updateIn">
+            function <span class="apidocSignatureSpan">seamless-immutable.from.</span>updateIn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.from.without">
+            function <span class="apidocSignatureSpan">seamless-immutable.from.</span>without
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.seamless-immutable.seamless_immutable_development">module seamless-immutable.seamless_immutable_development</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.seamless_immutable_development.ImmutableError">
+            function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>ImmutableError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.seamless_immutable_development.asMutable">
+            function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>asMutable
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.seamless_immutable_development.asObject">
+            function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>asObject
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.seamless_immutable_development.flatMap">
+            function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>flatMap
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.seamless_immutable_development.from">
+            function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>from
+            <span class="apidocSignatureSpan">(obj, options, stackRemaining)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.seamless_immutable_development.getIn">
+            function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>getIn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.seamless_immutable_development.isImmutable">
+            function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>isImmutable
+            <span class="apidocSignatureSpan">(target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.seamless_immutable_development.merge">
+            function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>merge
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.seamless_immutable_development.replace">
+            function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>replace
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.seamless_immutable_development.set">
+            function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>set
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.seamless_immutable_development.setIn">
+            function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>setIn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.seamless_immutable_development.static">
+            function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>static
+            <span class="apidocSignatureSpan">(obj, options, stackRemaining)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.seamless_immutable_development.update">
+            function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>update
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.seamless_immutable_development.updateIn">
+            function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>updateIn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.seamless_immutable_development.without">
+            function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>without
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.seamless-immutable.static">module seamless-immutable.static</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.static.ImmutableError">
+            function <span class="apidocSignatureSpan">seamless-immutable.static.</span>ImmutableError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.static.asMutable">
+            function <span class="apidocSignatureSpan">seamless-immutable.static.</span>asMutable
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.static.asObject">
+            function <span class="apidocSignatureSpan">seamless-immutable.static.</span>asObject
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.static.flatMap">
+            function <span class="apidocSignatureSpan">seamless-immutable.static.</span>flatMap
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.static.from">
+            function <span class="apidocSignatureSpan">seamless-immutable.static.</span>from
+            <span class="apidocSignatureSpan">(obj, options, stackRemaining)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.static.getIn">
+            function <span class="apidocSignatureSpan">seamless-immutable.static.</span>getIn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.static.isImmutable">
+            function <span class="apidocSignatureSpan">seamless-immutable.static.</span>isImmutable
+            <span class="apidocSignatureSpan">(target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.static.merge">
+            function <span class="apidocSignatureSpan">seamless-immutable.static.</span>merge
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.static.replace">
+            function <span class="apidocSignatureSpan">seamless-immutable.static.</span>replace
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.static.set">
+            function <span class="apidocSignatureSpan">seamless-immutable.static.</span>set
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.static.setIn">
+            function <span class="apidocSignatureSpan">seamless-immutable.static.</span>setIn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.static.update">
+            function <span class="apidocSignatureSpan">seamless-immutable.static.</span>update
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.static.updateIn">
+            function <span class="apidocSignatureSpan">seamless-immutable.static.</span>updateIn
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.static.without">
+            function <span class="apidocSignatureSpan">seamless-immutable.static.</span>without
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.seamless-immutable.static.ImmutableError">module seamless-immutable.static.ImmutableError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.static.ImmutableError.ImmutableError">
+            function <span class="apidocSignatureSpan">seamless-immutable.static.</span>ImmutableError
+            <span class="apidocSignatureSpan">(message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.seamless-immutable.static.ImmutableError.prototype">module seamless-immutable.static.ImmutableError.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.seamless-immutable.static.ImmutableError.prototype.constructor">
+            function <span class="apidocSignatureSpan">seamless-immutable.static.ImmutableError.prototype.</span>constructor
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.seamless-immutable" id="apidoc.module.seamless-immutable">module seamless-immutable</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.seamless-immutable" id="apidoc.element.seamless-immutable.seamless-immutable">
+        function <span class="apidocSignatureSpan"></span>seamless-immutable
+        <span class="apidocSignatureSpan">(obj, options, stackRemaining)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Immutable(obj, options, stackRemaining) {
+  if (isImmutable(obj) || isReactElement(obj) || isFileObject(obj) || isError(obj)) {
+    return obj;
+  } else if (isPromise(obj)) {
+    return obj.then(Immutable);
+  } else if (Array.isArray(obj)) {
+    return makeImmutableArray(obj.slice());
+  } else if (obj instanceof Date) {
+    return makeImmutableDate(new Date(obj.getTime()));
+  } else {
+    // Don't freeze the object we were given; make a clone and use that.
+    var prototype = options &amp;&amp; options.prototype;
+    var instantiateEmptyObject =
+      (!prototype || prototype === Object.prototype) ?
+        instantiatePlainObject : (function() { return Object.create(prototype); });
+    var clone = instantiateEmptyObject();
+
+    if (process.env.NODE_ENV !== "production") {
+<span class="apidocCodeCommentSpan">      /*jshint eqnull:true */
+</span>      if (stackRemaining == null) {
+        stackRemaining = 64;
+      }
+      if (stackRemaining &lt;= 0) {
+        throw new ImmutableError("Attempt to construct Immutable from a deeply nested object was detected." +
+          " Have you tried to wrap an object with circular references (e.g. React element)?" +
+          " See https://github.com/rtfeldman/seamless-immutable/wiki/Deeply-nested-object-was-detected for details.");
+      }
+      stackRemaining -= 1;
+    }
+
+    for (var key in obj) {
+      if (Object.getOwnPropertyDescriptor(obj, key)) {
+        clone[key] = Immutable(obj[key], undefined, stackRemaining);
+      }
+    }
+
+    return makeImmutableObject(clone);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.ImmutableError" id="apidoc.element.seamless-immutable.ImmutableError">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>ImmutableError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ImmutableError(message) {
+  this.name = 'MyError';
+  this.message = message;
+  this.stack = (new Error()).stack;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.ImmutableError.prototype.constructor" id="apidoc.element.seamless-immutable.ImmutableError.prototype.constructor">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>ImmutableError.prototype.constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Error() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.asMutable" id="apidoc.element.seamless-immutable.asMutable">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>asMutable
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  if (Array.isArray(self)) {
+      return fnArray.apply(self, args);
+  } else if (self instanceof Date) {
+      return fnDate.apply(self, args);
+  } else {
+      return fnObject.apply(self, args);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+You can also call `.asObject` without passing an iterator, in which case it will proceed assuming the Array
+is already organized as desired.
+
+### asMutable
+
+```javascript
+var array = Immutable(["hello", "world"]);
+var mutableArray = Immutable.<span class="apidocCodeKeywordSpan">asMutable</span>(array);
+
+mutableArray.push("!!!");
+
+mutableArray // ["hello", "world", "!!!"]
+```
+
+Returns a mutable copy of the array. For a deeply mutable copy, in which any instances of `Immutable` contained in nested data structures
+ within the array have been converted back to mutable data structures, call `Immutable.asMutable(obj, {deep: true})` instead.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.asObject" id="apidoc.element.seamless-immutable.asObject">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>asObject
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Effectively performs a [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) over the
+ elements in the array, except that whenever the provided
+iterator function returns an Array, that Array's elements are each added to the final result.
+
+### asObject
+
+```javascript
+var array = Immutable(["hey", "you"]);
+Immutable.<span class="apidocCodeKeywordSpan">asObject</span>(array, function(str) {
+  return [str, str.toUpperCase()];
+});
+// returns Immutable({hey: "HEY", you: "YOU"})
+```
+
+Effectively performs a [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) over the
+ elements in the array, expecting that the iterator function
+will return an array of two elements - the first representing a key, the other
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.flatMap" id="apidoc.element.seamless-immutable.flatMap">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>flatMap
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Beyond [the usual Array fare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Accessor_methods
+), the following methods have been added.
+
+### flatMap
+
+```javascript
+var array = Immutable(["here", "we", "go"]);
+Immutable.<span class="apidocCodeKeywordSpan">flatMap</span>(array, function(str) {
+return [str, str, str];
+});
+// returns Immutable(["here", "here", "here", "we", "we", "we", "
+;go", "go", "go"])
+
+var array = Immutable(["drop the numbers!", 3, 2, 1, 0, null, undefined]);
+Immutable.flatMap(array, function(value) {
+if (typeof value === "number") {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.from" id="apidoc.element.seamless-immutable.from">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>from
+        <span class="apidocSignatureSpan">(obj, options, stackRemaining)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Immutable(obj, options, stackRemaining) {
+  if (isImmutable(obj) || isReactElement(obj) || isFileObject(obj) || isError(obj)) {
+    return obj;
+  } else if (isPromise(obj)) {
+    return obj.then(Immutable);
+  } else if (Array.isArray(obj)) {
+    return makeImmutableArray(obj.slice());
+  } else if (obj instanceof Date) {
+    return makeImmutableDate(new Date(obj.getTime()));
+  } else {
+    // Don't freeze the object we were given; make a clone and use that.
+    var prototype = options &amp;&amp; options.prototype;
+    var instantiateEmptyObject =
+      (!prototype || prototype === Object.prototype) ?
+        instantiatePlainObject : (function() { return Object.create(prototype); });
+    var clone = instantiateEmptyObject();
+
+    if (process.env.NODE_ENV !== "production") {
+<span class="apidocCodeCommentSpan">      /*jshint eqnull:true */
+</span>      if (stackRemaining == null) {
+        stackRemaining = 64;
+      }
+      if (stackRemaining &lt;= 0) {
+        throw new ImmutableError("Attempt to construct Immutable from a deeply nested object was detected." +
+          " Have you tried to wrap an object with circular references (e.g. React element)?" +
+          " See https://github.com/rtfeldman/seamless-immutable/wiki/Deeply-nested-object-was-detected for details.");
+      }
+      stackRemaining -= 1;
+    }
+
+    for (var key in obj) {
+      if (Object.getOwnPropertyDescriptor(obj, key)) {
+        clone[key] = Immutable(obj[key], undefined, stackRemaining);
+      }
+    }
+
+    return makeImmutableObject(clone);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Immutable.from
+
+If your linter cringes with the use of `Immutable` without a preceding `new`
+(e.g. ESLint's [new-cap](http://eslint.org/docs/rules/new-cap) rule),
+use `Immutable.from`:
+
+```javascript
+Immutable.<span class="apidocCodeKeywordSpan">from</span>([1, 2, 3]);
+// is functionally the same as calling:
+Immutable([1, 2, 3])
+```
+
+## Immutable Array
+
+Like a regular Array, but immutable! You can construct these by passing
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.getIn" id="apidoc.element.seamless-immutable.getIn">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>getIn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### getIn
+
+Returns the value at the given path. A default value can be provided as a second argument.
+
+```javascript
+var obj = Immutable({type: {main: "parrot", subtype: "Norwegian Blue"}, status: "alive"});
+Immutable.<span class="apidocCodeKeywordSpan">getIn</span>(obj, ["type", "subtype"]);
+// returns "Norwegian Blue"
+Immutable.getIn(obj, ["type", "class"], "Aves");
+// returns "Aves"
+```
+
+### update
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.isImmutable" id="apidoc.element.seamless-immutable.isImmutable">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>isImmutable
+        <span class="apidocSignatureSpan">(target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isImmutable(target) {
+  if (typeof target === "object") {
+    return target === null || Boolean(
+      Object.getOwnPropertyDescriptor(target, immutabilityTag)
+    );
+  } else {
+    // In JavaScript, only objects are even potentially mutable.
+    // strings, numbers, null, and undefined are all naturally immutable.
+    return true;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Returns a mutable copy of the array. For a deeply mutable copy, in which any instances of `Immutable` contained in nested data structures
+ within the array have been converted back to mutable data structures, call `Immutable.asMutable(obj, {deep: true})` instead.
+
+### isImmutable
+```javascript
+var array = Immutable(["hello", "world"]);
+var mutableArray = ["hello", "world"];
+
+Immutable.<span class="apidocCodeKeywordSpan">isImmutable</span>(array)
+// returns true
+
+Immutable.isImmutable(mutableArray)
+// returns false
+```
+
+Returns whether an object is immutable or not.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.merge" id="apidoc.element.seamless-immutable.merge">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>merge
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+[1, 2, 3].concat(Immutable([6, 5, 4])).sort()
+// This will succeed, and will yield a sorted mutable array containing
+// [1, 2, 3, 4, 5, 6], because a vanilla array's concat() method has
+// no knowledge of Immutable.
+
+var obj = Immutable({all: "your base", are: {belong: "to them"}});
+Immutable.<span class="apidocCodeKeywordSpan">merge</span>(obj, {are: {belong: "to us"}})
+// This will return the following:
+// Immutable({all: "your base", are: {belong: "to us"}})
+```
+
+## Static or instance syntax
+
+Seamless-immutable supports both static and instance syntaxes:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.replace" id="apidoc.element.seamless-immutable.replace">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>replace
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+A third argument can be provided to perform a deep merge: `{deep: true}`.
+
+### replace
+
+```javascript
+var obj1 = Immutable({a: {b: 'test'}, c: 'test'});
+var obj2 = Immutable.<span class="apidocCodeKeywordSpan">replace</span>(obj1, {a: {b: 'test'}}, {deep: true});
+// returns Immutable({a: {b: 'test'}});
+obj1 === obj2
+// returns false
+obj1.a === obj2.a
+// returns true because child .a objects were identical
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.seamless_immutable_development" id="apidoc.element.seamless-immutable.seamless_immutable_development">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>seamless_immutable_development
+        <span class="apidocSignatureSpan">(obj, options, stackRemaining)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Immutable(obj, options, stackRemaining) {
+  if (isImmutable(obj) || isReactElement(obj) || isFileObject(obj) || isError(obj)) {
+    return obj;
+  } else if (isPromise(obj)) {
+    return obj.then(Immutable);
+  } else if (Array.isArray(obj)) {
+    return makeImmutableArray(obj.slice());
+  } else if (obj instanceof Date) {
+    return makeImmutableDate(new Date(obj.getTime()));
+  } else {
+    // Don't freeze the object we were given; make a clone and use that.
+    var prototype = options &amp;&amp; options.prototype;
+    var instantiateEmptyObject =
+      (!prototype || prototype === Object.prototype) ?
+        instantiatePlainObject : (function() { return Object.create(prototype); });
+    var clone = instantiateEmptyObject();
+
+    if ("development" !== "production") {
+<span class="apidocCodeCommentSpan">      /*jshint eqnull:true */
+</span>      if (stackRemaining == null) {
+        stackRemaining = 64;
+      }
+      if (stackRemaining &lt;= 0) {
+        throw new ImmutableError("Attempt to construct Immutable from a deeply nested object was detected." +
+          " Have you tried to wrap an object with circular references (e.g. React element)?" +
+          " See https://github.com/rtfeldman/seamless-immutable/wiki/Deeply-nested-object-was-detected for details.");
+      }
+      stackRemaining -= 1;
+    }
+
+    for (var key in obj) {
+      if (Object.getOwnPropertyDescriptor(obj, key)) {
+        clone[key] = Immutable(obj[key], undefined, stackRemaining);
+      }
+    }
+
+    return makeImmutableObject(clone);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.set" id="apidoc.element.seamless-immutable.set">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>set
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  if (Array.isArray(self)) {
+      return fnArray.apply(self, args);
+  } else {
+      return fnObject.apply(self, args);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+A second argument can be provided to perform a deep merge: `{deep: true}`.
+
+### set
+
+```javascript
+var obj = Immutable({type: "parrot", subtype: "Norwegian Blue", status: "alive"});
+Immutable.<span class="apidocCodeKeywordSpan">set</span>(obj, "status", "dead");
+// returns Immutable({type: "parrot", subtype: "Norwegian Blue", status: "dead"})
+```
+
+Returns an Immutable Object with a single property set to the provided value.
+Basically a more straightforward way of saying
+```javascript
+var obj = Immutable({type: "parrot", subtype: "Norwegian Blue", status: "alive"});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.setIn" id="apidoc.element.seamless-immutable.setIn">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>setIn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  if (Array.isArray(self)) {
+      return fnArray.apply(self, args);
+  } else {
+      return fnObject.apply(self, args);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Static or instance syntax
+
+Seamless-immutable supports both static and instance syntaxes:
+
+```
+var Immutable = require("seamless-immutable").static;
+
+Immutable.<span class="apidocCodeKeywordSpan">setIn</span>(obj, 'key', data)
+```
+
+```
+var Immutable = require("seamless-immutable");
+
+obj.setIn('key', data)
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.static" id="apidoc.element.seamless-immutable.static">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>static
+        <span class="apidocSignatureSpan">(obj, options, stackRemaining)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Immutable(obj, options, stackRemaining) {
+  if (isImmutable(obj) || isReactElement(obj) || isFileObject(obj) || isError(obj)) {
+    return obj;
+  } else if (isPromise(obj)) {
+    return obj.then(Immutable);
+  } else if (Array.isArray(obj)) {
+    return makeImmutableArray(obj.slice());
+  } else if (obj instanceof Date) {
+    return makeImmutableDate(new Date(obj.getTime()));
+  } else {
+    // Don't freeze the object we were given; make a clone and use that.
+    var prototype = options &amp;&amp; options.prototype;
+    var instantiateEmptyObject =
+      (!prototype || prototype === Object.prototype) ?
+        instantiatePlainObject : (function() { return Object.create(prototype); });
+    var clone = instantiateEmptyObject();
+
+    if (process.env.NODE_ENV !== "production") {
+<span class="apidocCodeCommentSpan">      /*jshint eqnull:true */
+</span>      if (stackRemaining == null) {
+        stackRemaining = 64;
+      }
+      if (stackRemaining &lt;= 0) {
+        throw new ImmutableError("Attempt to construct Immutable from a deeply nested object was detected." +
+          " Have you tried to wrap an object with circular references (e.g. React element)?" +
+          " See https://github.com/rtfeldman/seamless-immutable/wiki/Deeply-nested-object-was-detected for details.");
+      }
+      stackRemaining -= 1;
+    }
+
+    for (var key in obj) {
+      if (Object.getOwnPropertyDescriptor(obj, key)) {
+        clone[key] = Immutable(obj[key], undefined, stackRemaining);
+      }
+    }
+
+    return makeImmutableObject(clone);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.static.ImmutableError" id="apidoc.element.seamless-immutable.static.ImmutableError">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>static.ImmutableError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ImmutableError(message) {
+  this.name = 'MyError';
+  this.message = message;
+  this.stack = (new Error()).stack;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.update" id="apidoc.element.seamless-immutable.update">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>update
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### update
+
+Returns an Immutable Object with a single property updated using the provided updater function.
+
+```javascript
+function inc (x) { return x + 1 }
+var obj = Immutable({foo: 1});
+Immutable.<span class="apidocCodeKeywordSpan">update</span>(obj, "foo", inc);
+// returns Immutable({foo: 2})
+```
+
+All additional arguments will be passed to the updater function.
+
+```javascript
+function add (x, y) { return x + y }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.updateIn" id="apidoc.element.seamless-immutable.updateIn">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>updateIn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### updateIn
+
+Like [update](#update), but accepts a nested path to the property.
+
+```javascript
+function add (x, y) { return x + y }
+var obj = Immutable({foo: {bar: 1}});
+Immutable.<span class="apidocCodeKeywordSpan">updateIn</span>(obj, ["foo", "bar"], add, 10);
+// returns Immutable({foo: {bar: 11}})
+```
+
+### without
+
+```javascript
+var obj = Immutable({the: "forests", will: "echo", with: "laughter"});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.without" id="apidoc.element.seamless-immutable.without">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>without
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// returns Immutable({foo: {bar: 11}})
+```
+
+### without
+
+```javascript
+var obj = Immutable({the: "forests", will: "echo", with: "laughter"});
+Immutable.<span class="apidocCodeKeywordSpan">without</span>(obj, "with");
+// returns Immutable({the: "forests", will: "echo"})
+
+var obj = Immutable({the: "forests", will: "echo", with: "laughter"});
+Immutable.without(obj, ["will", "with"]);
+// returns Immutable({the: "forests"})
+
+var obj = Immutable({the: "forests", will: "echo", with: "laughter"});
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.seamless-immutable.ImmutableError" id="apidoc.module.seamless-immutable.ImmutableError">module seamless-immutable.ImmutableError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.ImmutableError.ImmutableError" id="apidoc.element.seamless-immutable.ImmutableError.ImmutableError">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>ImmutableError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ImmutableError(message) {
+  this.name = 'MyError';
+  this.message = message;
+  this.stack = (new Error()).stack;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.seamless-immutable.ImmutableError.prototype" id="apidoc.module.seamless-immutable.ImmutableError.prototype">module seamless-immutable.ImmutableError.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.ImmutableError.prototype.constructor" id="apidoc.element.seamless-immutable.ImmutableError.prototype.constructor">
+        function <span class="apidocSignatureSpan">seamless-immutable.ImmutableError.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Error() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.seamless-immutable.ImmutableError.prototype.constructor" id="apidoc.module.seamless-immutable.ImmutableError.prototype.constructor">module seamless-immutable.ImmutableError.prototype.constructor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.ImmutableError.prototype.constructor.constructor" id="apidoc.element.seamless-immutable.ImmutableError.prototype.constructor.constructor">
+        function <span class="apidocSignatureSpan">seamless-immutable.ImmutableError.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Function() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.ImmutableError.prototype.constructor.captureStackTrace" id="apidoc.element.seamless-immutable.ImmutableError.prototype.constructor.captureStackTrace">
+        function <span class="apidocSignatureSpan">seamless-immutable.ImmutableError.prototype.constructor.</span>captureStackTrace
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function captureStackTrace() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.seamless-immutable.from" id="apidoc.module.seamless-immutable.from">module seamless-immutable.from</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.from.from" id="apidoc.element.seamless-immutable.from.from">
+        function <span class="apidocSignatureSpan">seamless-immutable.</span>from
+        <span class="apidocSignatureSpan">(obj, options, stackRemaining)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Immutable(obj, options, stackRemaining) {
+  if (isImmutable(obj) || isReactElement(obj) || isFileObject(obj) || isError(obj)) {
+    return obj;
+  } else if (isPromise(obj)) {
+    return obj.then(Immutable);
+  } else if (Array.isArray(obj)) {
+    return makeImmutableArray(obj.slice());
+  } else if (obj instanceof Date) {
+    return makeImmutableDate(new Date(obj.getTime()));
+  } else {
+    // Don't freeze the object we were given; make a clone and use that.
+    var prototype = options &amp;&amp; options.prototype;
+    var instantiateEmptyObject =
+      (!prototype || prototype === Object.prototype) ?
+        instantiatePlainObject : (function() { return Object.create(prototype); });
+    var clone = instantiateEmptyObject();
+
+    if (process.env.NODE_ENV !== "production") {
+<span class="apidocCodeCommentSpan">      /*jshint eqnull:true */
+</span>      if (stackRemaining == null) {
+        stackRemaining = 64;
+      }
+      if (stackRemaining &lt;= 0) {
+        throw new ImmutableError("Attempt to construct Immutable from a deeply nested object was detected." +
+          " Have you tried to wrap an object with circular references (e.g. React element)?" +
+          " See https://github.com/rtfeldman/seamless-immutable/wiki/Deeply-nested-object-was-detected for details.");
+      }
+      stackRemaining -= 1;
+    }
+
+    for (var key in obj) {
+      if (Object.getOwnPropertyDescriptor(obj, key)) {
+        clone[key] = Immutable(obj[key], undefined, stackRemaining);
+      }
+    }
+
+    return makeImmutableObject(clone);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Immutable.from
+
+If your linter cringes with the use of `Immutable` without a preceding `new`
+(e.g. ESLint's [new-cap](http://eslint.org/docs/rules/new-cap) rule),
+use `Immutable.from`:
+
+```javascript
+Immutable.<span class="apidocCodeKeywordSpan">from</span>([1, 2, 3]);
+// is functionally the same as calling:
+Immutable([1, 2, 3])
+```
+
+## Immutable Array
+
+Like a regular Array, but immutable! You can construct these by passing
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.from.ImmutableError" id="apidoc.element.seamless-immutable.from.ImmutableError">
+        function <span class="apidocSignatureSpan">seamless-immutable.from.</span>ImmutableError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ImmutableError(message) {
+  this.name = 'MyError';
+  this.message = message;
+  this.stack = (new Error()).stack;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.from.asMutable" id="apidoc.element.seamless-immutable.from.asMutable">
+        function <span class="apidocSignatureSpan">seamless-immutable.from.</span>asMutable
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  if (Array.isArray(self)) {
+      return fnArray.apply(self, args);
+  } else if (self instanceof Date) {
+      return fnDate.apply(self, args);
+  } else {
+      return fnObject.apply(self, args);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+You can also call `.asObject` without passing an iterator, in which case it will proceed assuming the Array
+is already organized as desired.
+
+### asMutable
+
+```javascript
+var array = Immutable(["hello", "world"]);
+var mutableArray = Immutable.<span class="apidocCodeKeywordSpan">asMutable</span>(array);
+
+mutableArray.push("!!!");
+
+mutableArray // ["hello", "world", "!!!"]
+```
+
+Returns a mutable copy of the array. For a deeply mutable copy, in which any instances of `Immutable` contained in nested data structures
+ within the array have been converted back to mutable data structures, call `Immutable.asMutable(obj, {deep: true})` instead.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.from.asObject" id="apidoc.element.seamless-immutable.from.asObject">
+        function <span class="apidocSignatureSpan">seamless-immutable.from.</span>asObject
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Effectively performs a [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) over the
+ elements in the array, except that whenever the provided
+iterator function returns an Array, that Array's elements are each added to the final result.
+
+### asObject
+
+```javascript
+var array = Immutable(["hey", "you"]);
+Immutable.<span class="apidocCodeKeywordSpan">asObject</span>(array, function(str) {
+  return [str, str.toUpperCase()];
+});
+// returns Immutable({hey: "HEY", you: "YOU"})
+```
+
+Effectively performs a [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) over the
+ elements in the array, expecting that the iterator function
+will return an array of two elements - the first representing a key, the other
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.from.flatMap" id="apidoc.element.seamless-immutable.from.flatMap">
+        function <span class="apidocSignatureSpan">seamless-immutable.from.</span>flatMap
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Beyond [the usual Array fare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Accessor_methods
+), the following methods have been added.
+
+### flatMap
+
+```javascript
+var array = Immutable(["here", "we", "go"]);
+Immutable.<span class="apidocCodeKeywordSpan">flatMap</span>(array, function(str) {
+return [str, str, str];
+});
+// returns Immutable(["here", "here", "here", "we", "we", "we", "
+;go", "go", "go"])
+
+var array = Immutable(["drop the numbers!", 3, 2, 1, 0, null, undefined]);
+Immutable.flatMap(array, function(value) {
+if (typeof value === "number") {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.from.getIn" id="apidoc.element.seamless-immutable.from.getIn">
+        function <span class="apidocSignatureSpan">seamless-immutable.from.</span>getIn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### getIn
+
+Returns the value at the given path. A default value can be provided as a second argument.
+
+```javascript
+var obj = Immutable({type: {main: "parrot", subtype: "Norwegian Blue"}, status: "alive"});
+Immutable.<span class="apidocCodeKeywordSpan">getIn</span>(obj, ["type", "subtype"]);
+// returns "Norwegian Blue"
+Immutable.getIn(obj, ["type", "class"], "Aves");
+// returns "Aves"
+```
+
+### update
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.from.isImmutable" id="apidoc.element.seamless-immutable.from.isImmutable">
+        function <span class="apidocSignatureSpan">seamless-immutable.from.</span>isImmutable
+        <span class="apidocSignatureSpan">(target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isImmutable(target) {
+  if (typeof target === "object") {
+    return target === null || Boolean(
+      Object.getOwnPropertyDescriptor(target, immutabilityTag)
+    );
+  } else {
+    // In JavaScript, only objects are even potentially mutable.
+    // strings, numbers, null, and undefined are all naturally immutable.
+    return true;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Returns a mutable copy of the array. For a deeply mutable copy, in which any instances of `Immutable` contained in nested data structures
+ within the array have been converted back to mutable data structures, call `Immutable.asMutable(obj, {deep: true})` instead.
+
+### isImmutable
+```javascript
+var array = Immutable(["hello", "world"]);
+var mutableArray = ["hello", "world"];
+
+Immutable.<span class="apidocCodeKeywordSpan">isImmutable</span>(array)
+// returns true
+
+Immutable.isImmutable(mutableArray)
+// returns false
+```
+
+Returns whether an object is immutable or not.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.from.merge" id="apidoc.element.seamless-immutable.from.merge">
+        function <span class="apidocSignatureSpan">seamless-immutable.from.</span>merge
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+[1, 2, 3].concat(Immutable([6, 5, 4])).sort()
+// This will succeed, and will yield a sorted mutable array containing
+// [1, 2, 3, 4, 5, 6], because a vanilla array's concat() method has
+// no knowledge of Immutable.
+
+var obj = Immutable({all: "your base", are: {belong: "to them"}});
+Immutable.<span class="apidocCodeKeywordSpan">merge</span>(obj, {are: {belong: "to us"}})
+// This will return the following:
+// Immutable({all: "your base", are: {belong: "to us"}})
+```
+
+## Static or instance syntax
+
+Seamless-immutable supports both static and instance syntaxes:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.from.replace" id="apidoc.element.seamless-immutable.from.replace">
+        function <span class="apidocSignatureSpan">seamless-immutable.from.</span>replace
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+A third argument can be provided to perform a deep merge: `{deep: true}`.
+
+### replace
+
+```javascript
+var obj1 = Immutable({a: {b: 'test'}, c: 'test'});
+var obj2 = Immutable.<span class="apidocCodeKeywordSpan">replace</span>(obj1, {a: {b: 'test'}}, {deep: true});
+// returns Immutable({a: {b: 'test'}});
+obj1 === obj2
+// returns false
+obj1.a === obj2.a
+// returns true because child .a objects were identical
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.from.set" id="apidoc.element.seamless-immutable.from.set">
+        function <span class="apidocSignatureSpan">seamless-immutable.from.</span>set
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  if (Array.isArray(self)) {
+      return fnArray.apply(self, args);
+  } else {
+      return fnObject.apply(self, args);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+A second argument can be provided to perform a deep merge: `{deep: true}`.
+
+### set
+
+```javascript
+var obj = Immutable({type: "parrot", subtype: "Norwegian Blue", status: "alive"});
+Immutable.<span class="apidocCodeKeywordSpan">set</span>(obj, "status", "dead");
+// returns Immutable({type: "parrot", subtype: "Norwegian Blue", status: "dead"})
+```
+
+Returns an Immutable Object with a single property set to the provided value.
+Basically a more straightforward way of saying
+```javascript
+var obj = Immutable({type: "parrot", subtype: "Norwegian Blue", status: "alive"});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.from.setIn" id="apidoc.element.seamless-immutable.from.setIn">
+        function <span class="apidocSignatureSpan">seamless-immutable.from.</span>setIn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  if (Array.isArray(self)) {
+      return fnArray.apply(self, args);
+  } else {
+      return fnObject.apply(self, args);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Static or instance syntax
+
+Seamless-immutable supports both static and instance syntaxes:
+
+```
+var Immutable = require("seamless-immutable").static;
+
+Immutable.<span class="apidocCodeKeywordSpan">setIn</span>(obj, 'key', data)
+```
+
+```
+var Immutable = require("seamless-immutable");
+
+obj.setIn('key', data)
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.from.static" id="apidoc.element.seamless-immutable.from.static">
+        function <span class="apidocSignatureSpan">seamless-immutable.from.</span>static
+        <span class="apidocSignatureSpan">(obj, options, stackRemaining)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Immutable(obj, options, stackRemaining) {
+  if (isImmutable(obj) || isReactElement(obj) || isFileObject(obj) || isError(obj)) {
+    return obj;
+  } else if (isPromise(obj)) {
+    return obj.then(Immutable);
+  } else if (Array.isArray(obj)) {
+    return makeImmutableArray(obj.slice());
+  } else if (obj instanceof Date) {
+    return makeImmutableDate(new Date(obj.getTime()));
+  } else {
+    // Don't freeze the object we were given; make a clone and use that.
+    var prototype = options &amp;&amp; options.prototype;
+    var instantiateEmptyObject =
+      (!prototype || prototype === Object.prototype) ?
+        instantiatePlainObject : (function() { return Object.create(prototype); });
+    var clone = instantiateEmptyObject();
+
+    if (process.env.NODE_ENV !== "production") {
+<span class="apidocCodeCommentSpan">      /*jshint eqnull:true */
+</span>      if (stackRemaining == null) {
+        stackRemaining = 64;
+      }
+      if (stackRemaining &lt;= 0) {
+        throw new ImmutableError("Attempt to construct Immutable from a deeply nested object was detected." +
+          " Have you tried to wrap an object with circular references (e.g. React element)?" +
+          " See https://github.com/rtfeldman/seamless-immutable/wiki/Deeply-nested-object-was-detected for details.");
+      }
+      stackRemaining -= 1;
+    }
+
+    for (var key in obj) {
+      if (Object.getOwnPropertyDescriptor(obj, key)) {
+        clone[key] = Immutable(obj[key], undefined, stackRemaining);
+      }
+    }
+
+    return makeImmutableObject(clone);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.from.update" id="apidoc.element.seamless-immutable.from.update">
+        function <span class="apidocSignatureSpan">seamless-immutable.from.</span>update
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### update
+
+Returns an Immutable Object with a single property updated using the provided updater function.
+
+```javascript
+function inc (x) { return x + 1 }
+var obj = Immutable({foo: 1});
+Immutable.<span class="apidocCodeKeywordSpan">update</span>(obj, "foo", inc);
+// returns Immutable({foo: 2})
+```
+
+All additional arguments will be passed to the updater function.
+
+```javascript
+function add (x, y) { return x + y }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.from.updateIn" id="apidoc.element.seamless-immutable.from.updateIn">
+        function <span class="apidocSignatureSpan">seamless-immutable.from.</span>updateIn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### updateIn
+
+Like [update](#update), but accepts a nested path to the property.
+
+```javascript
+function add (x, y) { return x + y }
+var obj = Immutable({foo: {bar: 1}});
+Immutable.<span class="apidocCodeKeywordSpan">updateIn</span>(obj, ["foo", "bar"], add, 10);
+// returns Immutable({foo: {bar: 11}})
+```
+
+### without
+
+```javascript
+var obj = Immutable({the: "forests", will: "echo", with: "laughter"});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.from.without" id="apidoc.element.seamless-immutable.from.without">
+        function <span class="apidocSignatureSpan">seamless-immutable.from.</span>without
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// returns Immutable({foo: {bar: 11}})
+```
+
+### without
+
+```javascript
+var obj = Immutable({the: "forests", will: "echo", with: "laughter"});
+Immutable.<span class="apidocCodeKeywordSpan">without</span>(obj, "with");
+// returns Immutable({the: "forests", will: "echo"})
+
+var obj = Immutable({the: "forests", will: "echo", with: "laughter"});
+Immutable.without(obj, ["will", "with"]);
+// returns Immutable({the: "forests"})
+
+var obj = Immutable({the: "forests", will: "echo", with: "laughter"});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.seamless-immutable.seamless_immutable_development" id="apidoc.module.seamless-immutable.seamless_immutable_development">module seamless-immutable.seamless_immutable_development</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.seamless_immutable_development.ImmutableError" id="apidoc.element.seamless-immutable.seamless_immutable_development.ImmutableError">
+        function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>ImmutableError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ImmutableError(message) {
+  this.name = 'MyError';
+  this.message = message;
+  this.stack = (new Error()).stack;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.seamless_immutable_development.asMutable" id="apidoc.element.seamless-immutable.seamless_immutable_development.asMutable">
+        function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>asMutable
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  if (Array.isArray(self)) {
+      return fnArray.apply(self, args);
+  } else if (self instanceof Date) {
+      return fnDate.apply(self, args);
+  } else {
+      return fnObject.apply(self, args);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+You can also call `.asObject` without passing an iterator, in which case it will proceed assuming the Array
+is already organized as desired.
+
+### asMutable
+
+```javascript
+var array = Immutable(["hello", "world"]);
+var mutableArray = Immutable.<span class="apidocCodeKeywordSpan">asMutable</span>(array);
+
+mutableArray.push("!!!");
+
+mutableArray // ["hello", "world", "!!!"]
+```
+
+Returns a mutable copy of the array. For a deeply mutable copy, in which any instances of `Immutable` contained in nested data structures
+ within the array have been converted back to mutable data structures, call `Immutable.asMutable(obj, {deep: true})` instead.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.seamless_immutable_development.asObject" id="apidoc.element.seamless-immutable.seamless_immutable_development.asObject">
+        function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>asObject
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Effectively performs a [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) over the
+ elements in the array, except that whenever the provided
+iterator function returns an Array, that Array's elements are each added to the final result.
+
+### asObject
+
+```javascript
+var array = Immutable(["hey", "you"]);
+Immutable.<span class="apidocCodeKeywordSpan">asObject</span>(array, function(str) {
+  return [str, str.toUpperCase()];
+});
+// returns Immutable({hey: "HEY", you: "YOU"})
+```
+
+Effectively performs a [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) over the
+ elements in the array, expecting that the iterator function
+will return an array of two elements - the first representing a key, the other
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.seamless_immutable_development.flatMap" id="apidoc.element.seamless-immutable.seamless_immutable_development.flatMap">
+        function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>flatMap
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Beyond [the usual Array fare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Accessor_methods
+), the following methods have been added.
+
+### flatMap
+
+```javascript
+var array = Immutable(["here", "we", "go"]);
+Immutable.<span class="apidocCodeKeywordSpan">flatMap</span>(array, function(str) {
+return [str, str, str];
+});
+// returns Immutable(["here", "here", "here", "we", "we", "we", "
+;go", "go", "go"])
+
+var array = Immutable(["drop the numbers!", 3, 2, 1, 0, null, undefined]);
+Immutable.flatMap(array, function(value) {
+if (typeof value === "number") {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.seamless_immutable_development.from" id="apidoc.element.seamless-immutable.seamless_immutable_development.from">
+        function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>from
+        <span class="apidocSignatureSpan">(obj, options, stackRemaining)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Immutable(obj, options, stackRemaining) {
+  if (isImmutable(obj) || isReactElement(obj) || isFileObject(obj) || isError(obj)) {
+    return obj;
+  } else if (isPromise(obj)) {
+    return obj.then(Immutable);
+  } else if (Array.isArray(obj)) {
+    return makeImmutableArray(obj.slice());
+  } else if (obj instanceof Date) {
+    return makeImmutableDate(new Date(obj.getTime()));
+  } else {
+    // Don't freeze the object we were given; make a clone and use that.
+    var prototype = options &amp;&amp; options.prototype;
+    var instantiateEmptyObject =
+      (!prototype || prototype === Object.prototype) ?
+        instantiatePlainObject : (function() { return Object.create(prototype); });
+    var clone = instantiateEmptyObject();
+
+    if ("development" !== "production") {
+<span class="apidocCodeCommentSpan">      /*jshint eqnull:true */
+</span>      if (stackRemaining == null) {
+        stackRemaining = 64;
+      }
+      if (stackRemaining &lt;= 0) {
+        throw new ImmutableError("Attempt to construct Immutable from a deeply nested object was detected." +
+          " Have you tried to wrap an object with circular references (e.g. React element)?" +
+          " See https://github.com/rtfeldman/seamless-immutable/wiki/Deeply-nested-object-was-detected for details.");
+      }
+      stackRemaining -= 1;
+    }
+
+    for (var key in obj) {
+      if (Object.getOwnPropertyDescriptor(obj, key)) {
+        clone[key] = Immutable(obj[key], undefined, stackRemaining);
+      }
+    }
+
+    return makeImmutableObject(clone);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Immutable.from
+
+If your linter cringes with the use of `Immutable` without a preceding `new`
+(e.g. ESLint's [new-cap](http://eslint.org/docs/rules/new-cap) rule),
+use `Immutable.from`:
+
+```javascript
+Immutable.<span class="apidocCodeKeywordSpan">from</span>([1, 2, 3]);
+// is functionally the same as calling:
+Immutable([1, 2, 3])
+```
+
+## Immutable Array
+
+Like a regular Array, but immutable! You can construct these by passing
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.seamless_immutable_development.getIn" id="apidoc.element.seamless-immutable.seamless_immutable_development.getIn">
+        function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>getIn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### getIn
+
+Returns the value at the given path. A default value can be provided as a second argument.
+
+```javascript
+var obj = Immutable({type: {main: "parrot", subtype: "Norwegian Blue"}, status: "alive"});
+Immutable.<span class="apidocCodeKeywordSpan">getIn</span>(obj, ["type", "subtype"]);
+// returns "Norwegian Blue"
+Immutable.getIn(obj, ["type", "class"], "Aves");
+// returns "Aves"
+```
+
+### update
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.seamless_immutable_development.isImmutable" id="apidoc.element.seamless-immutable.seamless_immutable_development.isImmutable">
+        function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>isImmutable
+        <span class="apidocSignatureSpan">(target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isImmutable(target) {
+  if (typeof target === "object") {
+    return target === null || Boolean(
+      Object.getOwnPropertyDescriptor(target, immutabilityTag)
+    );
+  } else {
+    // In JavaScript, only objects are even potentially mutable.
+    // strings, numbers, null, and undefined are all naturally immutable.
+    return true;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Returns a mutable copy of the array. For a deeply mutable copy, in which any instances of `Immutable` contained in nested data structures
+ within the array have been converted back to mutable data structures, call `Immutable.asMutable(obj, {deep: true})` instead.
+
+### isImmutable
+```javascript
+var array = Immutable(["hello", "world"]);
+var mutableArray = ["hello", "world"];
+
+Immutable.<span class="apidocCodeKeywordSpan">isImmutable</span>(array)
+// returns true
+
+Immutable.isImmutable(mutableArray)
+// returns false
+```
+
+Returns whether an object is immutable or not.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.seamless_immutable_development.merge" id="apidoc.element.seamless-immutable.seamless_immutable_development.merge">
+        function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>merge
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+[1, 2, 3].concat(Immutable([6, 5, 4])).sort()
+// This will succeed, and will yield a sorted mutable array containing
+// [1, 2, 3, 4, 5, 6], because a vanilla array's concat() method has
+// no knowledge of Immutable.
+
+var obj = Immutable({all: "your base", are: {belong: "to them"}});
+Immutable.<span class="apidocCodeKeywordSpan">merge</span>(obj, {are: {belong: "to us"}})
+// This will return the following:
+// Immutable({all: "your base", are: {belong: "to us"}})
+```
+
+## Static or instance syntax
+
+Seamless-immutable supports both static and instance syntaxes:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.seamless_immutable_development.replace" id="apidoc.element.seamless-immutable.seamless_immutable_development.replace">
+        function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>replace
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+A third argument can be provided to perform a deep merge: `{deep: true}`.
+
+### replace
+
+```javascript
+var obj1 = Immutable({a: {b: 'test'}, c: 'test'});
+var obj2 = Immutable.<span class="apidocCodeKeywordSpan">replace</span>(obj1, {a: {b: 'test'}}, {deep: true});
+// returns Immutable({a: {b: 'test'}});
+obj1 === obj2
+// returns false
+obj1.a === obj2.a
+// returns true because child .a objects were identical
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.seamless_immutable_development.set" id="apidoc.element.seamless-immutable.seamless_immutable_development.set">
+        function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>set
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  if (Array.isArray(self)) {
+      return fnArray.apply(self, args);
+  } else {
+      return fnObject.apply(self, args);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+A second argument can be provided to perform a deep merge: `{deep: true}`.
+
+### set
+
+```javascript
+var obj = Immutable({type: "parrot", subtype: "Norwegian Blue", status: "alive"});
+Immutable.<span class="apidocCodeKeywordSpan">set</span>(obj, "status", "dead");
+// returns Immutable({type: "parrot", subtype: "Norwegian Blue", status: "dead"})
+```
+
+Returns an Immutable Object with a single property set to the provided value.
+Basically a more straightforward way of saying
+```javascript
+var obj = Immutable({type: "parrot", subtype: "Norwegian Blue", status: "alive"});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.seamless_immutable_development.setIn" id="apidoc.element.seamless-immutable.seamless_immutable_development.setIn">
+        function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>setIn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  if (Array.isArray(self)) {
+      return fnArray.apply(self, args);
+  } else {
+      return fnObject.apply(self, args);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Static or instance syntax
+
+Seamless-immutable supports both static and instance syntaxes:
+
+```
+var Immutable = require("seamless-immutable").static;
+
+Immutable.<span class="apidocCodeKeywordSpan">setIn</span>(obj, 'key', data)
+```
+
+```
+var Immutable = require("seamless-immutable");
+
+obj.setIn('key', data)
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.seamless_immutable_development.static" id="apidoc.element.seamless-immutable.seamless_immutable_development.static">
+        function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>static
+        <span class="apidocSignatureSpan">(obj, options, stackRemaining)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Immutable(obj, options, stackRemaining) {
+  if (isImmutable(obj) || isReactElement(obj) || isFileObject(obj) || isError(obj)) {
+    return obj;
+  } else if (isPromise(obj)) {
+    return obj.then(Immutable);
+  } else if (Array.isArray(obj)) {
+    return makeImmutableArray(obj.slice());
+  } else if (obj instanceof Date) {
+    return makeImmutableDate(new Date(obj.getTime()));
+  } else {
+    // Don't freeze the object we were given; make a clone and use that.
+    var prototype = options &amp;&amp; options.prototype;
+    var instantiateEmptyObject =
+      (!prototype || prototype === Object.prototype) ?
+        instantiatePlainObject : (function() { return Object.create(prototype); });
+    var clone = instantiateEmptyObject();
+
+    if ("development" !== "production") {
+<span class="apidocCodeCommentSpan">      /*jshint eqnull:true */
+</span>      if (stackRemaining == null) {
+        stackRemaining = 64;
+      }
+      if (stackRemaining &lt;= 0) {
+        throw new ImmutableError("Attempt to construct Immutable from a deeply nested object was detected." +
+          " Have you tried to wrap an object with circular references (e.g. React element)?" +
+          " See https://github.com/rtfeldman/seamless-immutable/wiki/Deeply-nested-object-was-detected for details.");
+      }
+      stackRemaining -= 1;
+    }
+
+    for (var key in obj) {
+      if (Object.getOwnPropertyDescriptor(obj, key)) {
+        clone[key] = Immutable(obj[key], undefined, stackRemaining);
+      }
+    }
+
+    return makeImmutableObject(clone);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.seamless_immutable_development.update" id="apidoc.element.seamless-immutable.seamless_immutable_development.update">
+        function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>update
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### update
+
+Returns an Immutable Object with a single property updated using the provided updater function.
+
+```javascript
+function inc (x) { return x + 1 }
+var obj = Immutable({foo: 1});
+Immutable.<span class="apidocCodeKeywordSpan">update</span>(obj, "foo", inc);
+// returns Immutable({foo: 2})
+```
+
+All additional arguments will be passed to the updater function.
+
+```javascript
+function add (x, y) { return x + y }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.seamless_immutable_development.updateIn" id="apidoc.element.seamless-immutable.seamless_immutable_development.updateIn">
+        function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>updateIn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### updateIn
+
+Like [update](#update), but accepts a nested path to the property.
+
+```javascript
+function add (x, y) { return x + y }
+var obj = Immutable({foo: {bar: 1}});
+Immutable.<span class="apidocCodeKeywordSpan">updateIn</span>(obj, ["foo", "bar"], add, 10);
+// returns Immutable({foo: {bar: 11}})
+```
+
+### without
+
+```javascript
+var obj = Immutable({the: "forests", will: "echo", with: "laughter"});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.seamless_immutable_development.without" id="apidoc.element.seamless-immutable.seamless_immutable_development.without">
+        function <span class="apidocSignatureSpan">seamless-immutable.seamless_immutable_development.</span>without
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// returns Immutable({foo: {bar: 11}})
+```
+
+### without
+
+```javascript
+var obj = Immutable({the: "forests", will: "echo", with: "laughter"});
+Immutable.<span class="apidocCodeKeywordSpan">without</span>(obj, "with");
+// returns Immutable({the: "forests", will: "echo"})
+
+var obj = Immutable({the: "forests", will: "echo", with: "laughter"});
+Immutable.without(obj, ["will", "with"]);
+// returns Immutable({the: "forests"})
+
+var obj = Immutable({the: "forests", will: "echo", with: "laughter"});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.seamless-immutable.static" id="apidoc.module.seamless-immutable.static">module seamless-immutable.static</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.static.ImmutableError" id="apidoc.element.seamless-immutable.static.ImmutableError">
+        function <span class="apidocSignatureSpan">seamless-immutable.static.</span>ImmutableError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ImmutableError(message) {
+  this.name = 'MyError';
+  this.message = message;
+  this.stack = (new Error()).stack;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.static.asMutable" id="apidoc.element.seamless-immutable.static.asMutable">
+        function <span class="apidocSignatureSpan">seamless-immutable.static.</span>asMutable
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  if (Array.isArray(self)) {
+      return fnArray.apply(self, args);
+  } else if (self instanceof Date) {
+      return fnDate.apply(self, args);
+  } else {
+      return fnObject.apply(self, args);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+You can also call `.asObject` without passing an iterator, in which case it will proceed assuming the Array
+is already organized as desired.
+
+### asMutable
+
+```javascript
+var array = Immutable(["hello", "world"]);
+var mutableArray = Immutable.<span class="apidocCodeKeywordSpan">asMutable</span>(array);
+
+mutableArray.push("!!!");
+
+mutableArray // ["hello", "world", "!!!"]
+```
+
+Returns a mutable copy of the array. For a deeply mutable copy, in which any instances of `Immutable` contained in nested data structures
+ within the array have been converted back to mutable data structures, call `Immutable.asMutable(obj, {deep: true})` instead.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.static.asObject" id="apidoc.element.seamless-immutable.static.asObject">
+        function <span class="apidocSignatureSpan">seamless-immutable.static.</span>asObject
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Effectively performs a [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) over the
+ elements in the array, except that whenever the provided
+iterator function returns an Array, that Array's elements are each added to the final result.
+
+### asObject
+
+```javascript
+var array = Immutable(["hey", "you"]);
+Immutable.<span class="apidocCodeKeywordSpan">asObject</span>(array, function(str) {
+  return [str, str.toUpperCase()];
+});
+// returns Immutable({hey: "HEY", you: "YOU"})
+```
+
+Effectively performs a [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) over the
+ elements in the array, expecting that the iterator function
+will return an array of two elements - the first representing a key, the other
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.static.flatMap" id="apidoc.element.seamless-immutable.static.flatMap">
+        function <span class="apidocSignatureSpan">seamless-immutable.static.</span>flatMap
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Beyond [the usual Array fare](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Accessor_methods
+), the following methods have been added.
+
+### flatMap
+
+```javascript
+var array = Immutable(["here", "we", "go"]);
+Immutable.<span class="apidocCodeKeywordSpan">flatMap</span>(array, function(str) {
+return [str, str, str];
+});
+// returns Immutable(["here", "here", "here", "we", "we", "we", "
+;go", "go", "go"])
+
+var array = Immutable(["drop the numbers!", 3, 2, 1, 0, null, undefined]);
+Immutable.flatMap(array, function(value) {
+if (typeof value === "number") {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.static.from" id="apidoc.element.seamless-immutable.static.from">
+        function <span class="apidocSignatureSpan">seamless-immutable.static.</span>from
+        <span class="apidocSignatureSpan">(obj, options, stackRemaining)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Immutable(obj, options, stackRemaining) {
+  if (isImmutable(obj) || isReactElement(obj) || isFileObject(obj) || isError(obj)) {
+    return obj;
+  } else if (isPromise(obj)) {
+    return obj.then(Immutable);
+  } else if (Array.isArray(obj)) {
+    return makeImmutableArray(obj.slice());
+  } else if (obj instanceof Date) {
+    return makeImmutableDate(new Date(obj.getTime()));
+  } else {
+    // Don't freeze the object we were given; make a clone and use that.
+    var prototype = options &amp;&amp; options.prototype;
+    var instantiateEmptyObject =
+      (!prototype || prototype === Object.prototype) ?
+        instantiatePlainObject : (function() { return Object.create(prototype); });
+    var clone = instantiateEmptyObject();
+
+    if (process.env.NODE_ENV !== "production") {
+<span class="apidocCodeCommentSpan">      /*jshint eqnull:true */
+</span>      if (stackRemaining == null) {
+        stackRemaining = 64;
+      }
+      if (stackRemaining &lt;= 0) {
+        throw new ImmutableError("Attempt to construct Immutable from a deeply nested object was detected." +
+          " Have you tried to wrap an object with circular references (e.g. React element)?" +
+          " See https://github.com/rtfeldman/seamless-immutable/wiki/Deeply-nested-object-was-detected for details.");
+      }
+      stackRemaining -= 1;
+    }
+
+    for (var key in obj) {
+      if (Object.getOwnPropertyDescriptor(obj, key)) {
+        clone[key] = Immutable(obj[key], undefined, stackRemaining);
+      }
+    }
+
+    return makeImmutableObject(clone);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Immutable.from
+
+If your linter cringes with the use of `Immutable` without a preceding `new`
+(e.g. ESLint's [new-cap](http://eslint.org/docs/rules/new-cap) rule),
+use `Immutable.from`:
+
+```javascript
+Immutable.<span class="apidocCodeKeywordSpan">from</span>([1, 2, 3]);
+// is functionally the same as calling:
+Immutable([1, 2, 3])
+```
+
+## Immutable Array
+
+Like a regular Array, but immutable! You can construct these by passing
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.static.getIn" id="apidoc.element.seamless-immutable.static.getIn">
+        function <span class="apidocSignatureSpan">seamless-immutable.static.</span>getIn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### getIn
+
+Returns the value at the given path. A default value can be provided as a second argument.
+
+```javascript
+var obj = Immutable({type: {main: "parrot", subtype: "Norwegian Blue"}, status: "alive"});
+Immutable.<span class="apidocCodeKeywordSpan">getIn</span>(obj, ["type", "subtype"]);
+// returns "Norwegian Blue"
+Immutable.getIn(obj, ["type", "class"], "Aves");
+// returns "Aves"
+```
+
+### update
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.static.isImmutable" id="apidoc.element.seamless-immutable.static.isImmutable">
+        function <span class="apidocSignatureSpan">seamless-immutable.static.</span>isImmutable
+        <span class="apidocSignatureSpan">(target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isImmutable(target) {
+  if (typeof target === "object") {
+    return target === null || Boolean(
+      Object.getOwnPropertyDescriptor(target, immutabilityTag)
+    );
+  } else {
+    // In JavaScript, only objects are even potentially mutable.
+    // strings, numbers, null, and undefined are all naturally immutable.
+    return true;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Returns a mutable copy of the array. For a deeply mutable copy, in which any instances of `Immutable` contained in nested data structures
+ within the array have been converted back to mutable data structures, call `Immutable.asMutable(obj, {deep: true})` instead.
+
+### isImmutable
+```javascript
+var array = Immutable(["hello", "world"]);
+var mutableArray = ["hello", "world"];
+
+Immutable.<span class="apidocCodeKeywordSpan">isImmutable</span>(array)
+// returns true
+
+Immutable.isImmutable(mutableArray)
+// returns false
+```
+
+Returns whether an object is immutable or not.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.static.merge" id="apidoc.element.seamless-immutable.static.merge">
+        function <span class="apidocSignatureSpan">seamless-immutable.static.</span>merge
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+[1, 2, 3].concat(Immutable([6, 5, 4])).sort()
+// This will succeed, and will yield a sorted mutable array containing
+// [1, 2, 3, 4, 5, 6], because a vanilla array's concat() method has
+// no knowledge of Immutable.
+
+var obj = Immutable({all: "your base", are: {belong: "to them"}});
+Immutable.<span class="apidocCodeKeywordSpan">merge</span>(obj, {are: {belong: "to us"}})
+// This will return the following:
+// Immutable({all: "your base", are: {belong: "to us"}})
+```
+
+## Static or instance syntax
+
+Seamless-immutable supports both static and instance syntaxes:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.static.replace" id="apidoc.element.seamless-immutable.static.replace">
+        function <span class="apidocSignatureSpan">seamless-immutable.static.</span>replace
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+A third argument can be provided to perform a deep merge: `{deep: true}`.
+
+### replace
+
+```javascript
+var obj1 = Immutable({a: {b: 'test'}, c: 'test'});
+var obj2 = Immutable.<span class="apidocCodeKeywordSpan">replace</span>(obj1, {a: {b: 'test'}}, {deep: true});
+// returns Immutable({a: {b: 'test'}});
+obj1 === obj2
+// returns false
+obj1.a === obj2.a
+// returns true because child .a objects were identical
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.static.set" id="apidoc.element.seamless-immutable.static.set">
+        function <span class="apidocSignatureSpan">seamless-immutable.static.</span>set
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  if (Array.isArray(self)) {
+      return fnArray.apply(self, args);
+  } else {
+      return fnObject.apply(self, args);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+A second argument can be provided to perform a deep merge: `{deep: true}`.
+
+### set
+
+```javascript
+var obj = Immutable({type: "parrot", subtype: "Norwegian Blue", status: "alive"});
+Immutable.<span class="apidocCodeKeywordSpan">set</span>(obj, "status", "dead");
+// returns Immutable({type: "parrot", subtype: "Norwegian Blue", status: "dead"})
+```
+
+Returns an Immutable Object with a single property set to the provided value.
+Basically a more straightforward way of saying
+```javascript
+var obj = Immutable({type: "parrot", subtype: "Norwegian Blue", status: "alive"});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.static.setIn" id="apidoc.element.seamless-immutable.static.setIn">
+        function <span class="apidocSignatureSpan">seamless-immutable.static.</span>setIn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  if (Array.isArray(self)) {
+      return fnArray.apply(self, args);
+  } else {
+      return fnObject.apply(self, args);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+## Static or instance syntax
+
+Seamless-immutable supports both static and instance syntaxes:
+
+```
+var Immutable = require("seamless-immutable").static;
+
+Immutable.<span class="apidocCodeKeywordSpan">setIn</span>(obj, 'key', data)
+```
+
+```
+var Immutable = require("seamless-immutable");
+
+obj.setIn('key', data)
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.static.update" id="apidoc.element.seamless-immutable.static.update">
+        function <span class="apidocSignatureSpan">seamless-immutable.static.</span>update
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### update
+
+Returns an Immutable Object with a single property updated using the provided updater function.
+
+```javascript
+function inc (x) { return x + 1 }
+var obj = Immutable({foo: 1});
+Immutable.<span class="apidocCodeKeywordSpan">update</span>(obj, "foo", inc);
+// returns Immutable({foo: 2})
+```
+
+All additional arguments will be passed to the updater function.
+
+```javascript
+function add (x, y) { return x + y }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.static.updateIn" id="apidoc.element.seamless-immutable.static.updateIn">
+        function <span class="apidocSignatureSpan">seamless-immutable.static.</span>updateIn
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### updateIn
+
+Like [update](#update), but accepts a nested path to the property.
+
+```javascript
+function add (x, y) { return x + y }
+var obj = Immutable({foo: {bar: 1}});
+Immutable.<span class="apidocCodeKeywordSpan">updateIn</span>(obj, ["foo", "bar"], add, 10);
+// returns Immutable({foo: {bar: 11}})
+```
+
+### without
+
+```javascript
+var obj = Immutable({the: "forests", will: "echo", with: "laughter"});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.static.without" id="apidoc.element.seamless-immutable.static.without">
+        function <span class="apidocSignatureSpan">seamless-immutable.static.</span>without
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function staticWrapper() {
+  var args = [].slice.call(arguments);
+  var self = args.shift();
+  return fn.apply(self, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// returns Immutable({foo: {bar: 11}})
+```
+
+### without
+
+```javascript
+var obj = Immutable({the: "forests", will: "echo", with: "laughter"});
+Immutable.<span class="apidocCodeKeywordSpan">without</span>(obj, "with");
+// returns Immutable({the: "forests", will: "echo"})
+
+var obj = Immutable({the: "forests", will: "echo", with: "laughter"});
+Immutable.without(obj, ["will", "with"]);
+// returns Immutable({the: "forests"})
+
+var obj = Immutable({the: "forests", will: "echo", with: "laughter"});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.seamless-immutable.static.ImmutableError" id="apidoc.module.seamless-immutable.static.ImmutableError">module seamless-immutable.static.ImmutableError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.static.ImmutableError.ImmutableError" id="apidoc.element.seamless-immutable.static.ImmutableError.ImmutableError">
+        function <span class="apidocSignatureSpan">seamless-immutable.static.</span>ImmutableError
+        <span class="apidocSignatureSpan">(message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ImmutableError(message) {
+  this.name = 'MyError';
+  this.message = message;
+  this.stack = (new Error()).stack;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.seamless-immutable.static.ImmutableError.prototype" id="apidoc.module.seamless-immutable.static.ImmutableError.prototype">module seamless-immutable.static.ImmutableError.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.seamless-immutable.static.ImmutableError.prototype.constructor" id="apidoc.element.seamless-immutable.static.ImmutableError.prototype.constructor">
+        function <span class="apidocSignatureSpan">seamless-immutable.static.ImmutableError.prototype.</span>constructor
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Error() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
